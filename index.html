@@ -1,563 +1,469 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="THIEN HO TECHNOLOGY - Industrial automation, inverters, electric motors & power transmission solutions for Vietnam manufacturing. Hotline: 0886 072 780">
-  <meta name="keywords" content="biến tần ARINCO, động cơ GIMO, tự động hóa công nghiệp, servo motor, hộp số, Thiên Hồ Technology, industrial automation Vietnam">
+  <title>Thiên Hổ Technology | Biến tần ARINCO & Motor giảm tốc GIMO chính hãng</title>
+  <meta name="description" content="Biến tần ARINCO, motor giảm tốc GIMO chính hãng tại Việt Nam. Tiết kiệm 30-40% tiền điện. Bảo hành 18 tháng. Hỗ trợ kỹ thuật 7 ngày/tuần. Hotline: 0886 072 780.">
+  <meta name="keywords" content="biến tần ARINCO, motor giảm tốc GIMO, biến tần, motor, tự động hóa công nghiệp, Thiên Hổ, inverter, gear motor">
   <meta name="robots" content="index, follow">
-  <meta name="author" content="THIEN HO TECHNOLOGY">
-  <title>THIEN HO TECHNOLOGY | Industrial Automation & Power Transmission</title>
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="THIEN HO TECHNOLOGY | Industrial Automation Solutions">
-  <meta property="og:description" content="Providing industrial automation products and solutions that improve productivity, reduce energy consumption, and increase operational reliability.">
-  <meta property="og:image" content="static/logo/image.png">
+  <meta property="og:title" content="Thiên Hổ Technology — Biến tần ARINCO & Motor GIMO chính hãng">
+  <meta property="og:description" content="Tiết kiệm 30-40% tiền điện với biến tần ARINCO. Motor giảm tốc GIMO bền bỉ. Bảo hành 18 tháng. Hỗ trợ 7 ngày/tuần.">
+  <meta property="og:image" content="https://congnghethienho.com/thumbs/870x843x1/upload/seopage/logo-chuan-01-01-1750321331.png.webp">
   <meta property="og:url" content="https://congnghethienho.com">
-  <meta property="og:type" content="website">
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="THIEN HO TECHNOLOGY | Industrial Automation Solutions">
-  <meta name="twitter:description" content="Providing industrial automation products and solutions that improve productivity, reduce energy consumption, and increase operational reliability.">
-  <meta name="twitter:image" content="static/logo/image.png">
-
-  <!-- Fonts: Barlow Condensed (headlines) + Inter (body) -->
+  <link rel="canonical" href="https://congnghethienho.com">
+  <link rel="icon" type="image/x-icon" href="https://congnghethienho.com/upload/photo/logo-1753087636.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-
-  <!-- Font Awesome -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 
-  <!-- AOS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-
-  <!-- SwiperJS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          brand: '#ED312F',
+          teal: '#249DBA',
+          dark: '#1a1a2e',
+          muted: '#6b7280',
+        }
+      }
+    }
+  }
+  </script>
 
   <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "THIEN HO TECHNOLOGY",
+    "@type": "Organization",
+    "name": "CÔNG TY TNHH CÔNG NGHỆ THIÊN HỔ",
+    "alternateName": "Thiên Hổ Technology",
     "url": "https://congnghethienho.com",
-    "telephone": "+84886072780",
+    "logo": "https://congnghethienho.com/thumbs/870x843x1/upload/seopage/logo-chuan-01-01-1750321331.png.webp",
+    "telephone": ["+84886072780", "+84886797590"],
     "email": "ai.thienhotechnology@gmail.com",
-    "openingHours": "Mo-Fr 08:00-17:00",
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "VN"
-    }
+    "areaServed": { "@type": "Country", "name": "Vietnam" }
   }
   </script>
-
-  <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="bg-[#f8f8fa] text-dark antialiased">
 
-  <!-- Scroll Progress Bar -->
-  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
-
-  <!-- ======================== HEADER ======================== -->
-  <header class="site-header" id="siteHeader">
-    <nav class="nav-container" aria-label="Main navigation">
-      <a href="#home" class="nav-logo" aria-label="THIEN HO TECHNOLOGY - Home">
-        <!-- <img src="static/logo/image.png" alt="Thien Ho Technology Logo" width="44" height="44"> -->
-        <span class="logo-text">THIEN HO <span class="logo-accent">TECHNOLOGY</span></span>
+  <!-- ═══ NAV ═══ -->
+  <header class="fixed top-0 left-0 right-0 z-50 h-16 flex items-center bg-transparent transition-all duration-300" id="header">
+    <nav class="max-w-[1200px] mx-auto px-5 w-full flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2.5 shrink-0">
+        <svg width="34" height="34" viewBox="0 0 40 40" fill="none" class="shrink-0">
+          <polygon points="20,3 34,11 34,29 20,37 6,29 6,11" fill="none" stroke="#ED312F" stroke-width="1.5"/>
+          <polygon points="12,12 9,6 16,10" fill="#ED312F"/>
+          <polygon points="28,12 31,6 24,10" fill="#ED312F"/>
+          <polygon points="8,14 20,16 14,26 10,22" fill="#ED312F"/>
+          <polygon points="32,14 20,16 26,26 30,22" fill="#2563EB"/>
+          <polygon points="13,17 15,15 17,17 15,19" fill="#fff"/>
+          <polygon points="23,17 25,15 27,17 25,19" fill="#fff"/>
+          <circle cx="15" cy="17" r="1.5" fill="#1a1a2e"/>
+          <circle cx="25" cy="17" r="1.5" fill="#1a1a2e"/>
+          <polygon points="20,21 18,23 22,23" fill="#ED312F"/>
+          <path d="M14 25 Q20 30 26 25" stroke="#ED312F" stroke-width="1" fill="none" stroke-linecap="round"/>
+          <line x1="6" y1="20" x2="13" y2="22" stroke="#ED312F" stroke-width="0.8" stroke-linecap="round"/>
+          <line x1="5" y1="23" x2="12" y2="24" stroke="#ED312F" stroke-width="0.8" stroke-linecap="round"/>
+          <line x1="34" y1="20" x2="27" y2="22" stroke="#ED312F" stroke-width="0.8" stroke-linecap="round"/>
+          <line x1="35" y1="23" x2="28" y2="24" stroke="#ED312F" stroke-width="0.8" stroke-linecap="round"/>
+        </svg>
+        <span class="font-extrabold tracking-tight text-[0.95rem] text-dark">THIÊN HỔ <span class="text-brand font-medium">TECH</span></span>
       </a>
-
-      <ul class="nav-links" id="navLinks" role="list">
-        <li><a href="#home"      class="nav-link" data-i18n="nav.home">Home</a></li>
-        <li><a href="#about"     class="nav-link" data-i18n="nav.about">About</a></li>
-        <li><a href="#products"  class="nav-link" data-i18n="nav.products">Products</a></li>
-        <li><a href="#solutions" class="nav-link" data-i18n="nav.solutions">Solutions</a></li>
-        <li><a href="#projects"  class="nav-link" data-i18n="nav.projects">Projects</a></li>
-        <li><a href="#contact"   class="nav-link nav-cta" data-i18n="nav.contact">Contact</a></li>
-      </ul>
-
-      <div class="nav-right">
-        <button class="lang-toggle" id="langToggle" aria-label="Switch language">
-          <span class="lang-opt" id="langEN">EN</span>
-          <span class="lang-sep">/</span>
-          <span class="lang-opt" id="langVI">VI</span>
-        </button>
-        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </button>
+      <div class="hidden lg:flex items-center gap-1">
+        <a href="#why" class="px-4 py-2 text-sm text-muted hover:text-brand transition-colors">Tại sao</a>
+        <a href="#products" class="px-4 py-2 text-sm text-muted hover:text-brand transition-colors">Sản phẩm</a>
+        <a href="#projects" class="px-4 py-2 text-sm text-muted hover:text-brand transition-colors">Dự án</a>
+        <a href="#contact" class="ml-3 px-5 py-2 text-sm font-semibold bg-brand text-white rounded hover:bg-[#d42a28] transition-colors">Nhận báo giá</a>
       </div>
+      <a href="tel:0886072780" class="hidden sm:flex items-center gap-1.5 text-sm font-semibold text-brand"><i class="fa-solid fa-phone text-xs"></i> 0886 072 780</a>
+      <button class="lg:hidden flex flex-col gap-1 p-1 hamburger" id="hamburger" aria-label="Menu">
+        <span class="block w-5 h-[2px] bg-dark rounded transition-all"></span>
+        <span class="block w-5 h-[2px] bg-dark rounded transition-all"></span>
+        <span class="block w-5 h-[2px] bg-dark rounded transition-all"></span>
+      </button>
     </nav>
+    <div class="hidden mobile-nav" id="mobileNav">
+      <a href="#why" class="block px-5 py-3 text-sm text-muted hover:text-brand border-b border-gray-100">Tại sao chọn Thiên Hổ</a>
+      <a href="#products" class="block px-5 py-3 text-sm text-muted hover:text-brand border-b border-gray-100">Sản phẩm</a>
+      <a href="#projects" class="block px-5 py-3 text-sm text-muted hover:text-brand border-b border-gray-100">Dự án</a>
+      <a href="#contact" class="block px-5 py-3 text-sm font-semibold text-brand">Nhận báo giá</a>
+    </div>
   </header>
 
-  <main>
-
-    <!-- ======================== HERO ======================== -->
-    <section class="hero" id="home">
-      <div class="hero-bg" aria-hidden="true"></div>
-      <div class="container">
-        <div class="hero-inner">
-          <div class="hero-content">
-            <p class="hero-eyebrow" data-i18n="hero.eyebrow" data-aos="fade-up" data-aos-delay="100">
-              Industrial Automation Solutions
-            </p>
-            <h1 class="hero-headline" data-i18n-html="hero.headline" data-aos="fade-up" data-aos-delay="200">
-              Powering Vietnam's<br><span class="headline-accent">Manufacturing</span><br>Future
-            </h1>
-            <p class="hero-sub" data-i18n="hero.sub" data-aos="fade-up" data-aos-delay="300">
-              Providing industrial automation products and solutions that improve productivity, reduce energy consumption, and increase operational reliability.
-            </p>
-            <div class="hero-actions" data-aos="fade-up" data-aos-delay="400">
-              <a href="#contact" class="btn btn-primary" data-i18n="hero.btn1">Contact Us</a>
-              <a href="#products" class="btn btn-outline" data-i18n="hero.btn2">View Products</a>
-            </div>
-            <div class="hero-stats" data-aos="fade-up" data-aos-delay="500">
-              <div class="hero-stat">
-                <strong>100+</strong>
-                <span data-i18n="hero.stat1.label">Projects</span>
-              </div>
-              <div class="hero-stat-divider" aria-hidden="true"></div>
-              <div class="hero-stat">
-                <strong>500+</strong>
-                <span data-i18n="hero.stat2.label">Products Delivered</span>
-              </div>
-              <div class="hero-stat-divider" aria-hidden="true"></div>
-              <div class="hero-stat">
-                <strong>18mo</strong>
-                <span data-i18n="hero.stat3.label">Warranty</span>
-              </div>
-            </div>
+  <!-- ═══ HERO ═══ -->
+  <section class="min-h-screen flex items-center pt-16 relative overflow-hidden bg-gradient-to-br from-[#f8f8fa] via-white to-[#fef2f2]">
+    <div class="max-w-[1200px] mx-auto px-5 w-full py-16 lg:py-0">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div data-aos="fade-up">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-brand/5 border border-brand/10 rounded-full text-[0.6rem] font-bold uppercase tracking-widest text-brand mb-6">
+            <span class="w-1.5 h-1.5 bg-brand rounded-full animate-pulse"></span> Nhà phân phối chính thức
           </div>
-
-          <div class="hero-product" aria-hidden="true" data-aos="fade-left" data-aos-delay="300">
-            <div class="hero-product-inner">
-              <img src="static/Inverter/AV68-0-4R0G1.png" alt="" width="360" height="360">
-              <div class="hero-product-glow"></div>
-              <div class="hero-product-badge">
-                <i class="fa-solid fa-bolt"></i>
-                <span>ARINCO AV68</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ======================== ABOUT ======================== -->
-    <section class="about" id="about">
-      <div class="container">
-        <div class="about-grid">
-          <div class="about-content" data-aos="fade-right">
-            <p class="section-eyebrow" data-i18n="about.eyebrow">Who We Are</p>
-            <h2 class="section-title" data-i18n="about.title">About THIEN HO TECHNOLOGY</h2>
-            <p class="about-text" data-i18n="about.text1">
-              THIEN HO TECHNOLOGY is a trusted provider of industrial automation, power transmission systems, electric motors, gear motors, servo systems, and inverter solutions for manufacturing businesses throughout Vietnam.
-            </p>
-            <p class="about-text" data-i18n="about.text2">
-              We partner with industry-leading manufacturers to deliver reliable, efficient, and cost-effective automation components — backed by expert technical support and an 18-month warranty on every product.
-            </p>
-            <ul class="about-features" role="list">
-              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> <span data-i18n="about.feat1">Official distributor of ARINCO &amp; GIMO</span></li>
-              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> <span data-i18n="about.feat2">Nationwide installation &amp; commissioning</span></li>
-              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> <span data-i18n="about.feat3">Technical hotline 7 days a week</span></li>
-            </ul>
-            <a href="#contact" class="btn btn-primary" data-i18n="about.btn">Get in Touch</a>
-          </div>
-
-          <div class="about-cards" data-aos="fade-left">
-            <div class="about-card">
-              <i class="fa-solid fa-industry fa-2x" aria-hidden="true"></i>
-              <h3 data-i18n="about.card1.title">Industrial Grade</h3>
-              <p data-i18n="about.card1.text">Every product meets rigorous industrial standards for reliability in demanding environments.</p>
-            </div>
-            <div class="about-card">
-              <i class="fa-solid fa-bolt fa-2x" aria-hidden="true"></i>
-              <h3 data-i18n="about.card2.title">Energy Efficient</h3>
-              <p data-i18n="about.card2.text">Our inverter and motor solutions reduce energy consumption by up to 40%.</p>
-            </div>
-            <div class="about-card">
-              <i class="fa-solid fa-headset fa-2x" aria-hidden="true"></i>
-              <h3 data-i18n="about.card3.title">Expert Support</h3>
-              <p data-i18n="about.card3.text">Dedicated technical team available for installation, commissioning, and maintenance.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ======================== PRODUCTS ======================== -->
-    <section class="products" id="products">
-      <div class="container">
-        <div class="section-header" data-aos="fade-up">
-          <p class="section-eyebrow" data-i18n="products.eyebrow">What We Supply</p>
-          <h2 class="section-title section-title--light" data-i18n="products.title">Product Categories</h2>
-          <p class="section-desc section-desc--light" data-i18n="products.desc">Industry-leading automation components for every manufacturing need.</p>
-        </div>
-
-        <div class="products-grid">
-          <article class="product-card" data-aos="fade-up" data-aos-delay="80">
-            <div class="product-img-wrap">
-              <img src="static/Inverter/AV20-0-1R5G1.png" alt="ARINCO Inverter AV20" loading="lazy" width="260" height="260">
-            </div>
-            <div class="product-info">
-              <h3 data-i18n="product1.name">ARINCO Inverter</h3>
-              <p data-i18n="product1.desc">Variable frequency drives for precise motor speed control, energy savings, and soft-start protection.</p>
-              <a href="#contact" class="product-link"><span data-i18n="product.learn">Learn More</span> <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-            </div>
-          </article>
-
-          <article class="product-card" data-aos="fade-up" data-aos-delay="120">
-            <div class="product-img-wrap">
-              <img src="static/motor/GV22-0.2KW-5.png" alt="GIMO Gear Motor GV22" loading="lazy" width="260" height="260">
-            </div>
-            <div class="product-info">
-              <h3 data-i18n="product2.name">GIMO Gear Motor</h3>
-              <p data-i18n="product2.desc">High-efficiency gear motors with precision reduction ratios for conveyors, mixers, and packaging lines.</p>
-              <a href="#contact" class="product-link"><span data-i18n="product.learn">Learn More</span> <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-            </div>
-          </article>
-
-          <article class="product-card" data-aos="fade-up" data-aos-delay="160">
-            <div class="product-img-wrap">
-              <img src="static/motor/GYE3-80M1-2.png" alt="Three-Phase Electric Motor" loading="lazy" width="260" height="260">
-            </div>
-            <div class="product-info">
-              <h3 data-i18n="product3.name">Three-Phase Electric Motor</h3>
-              <p data-i18n="product3.desc">IE2/IE3 efficiency class three-phase induction motors for heavy-duty industrial applications.</p>
-              <a href="#contact" class="product-link"><span data-i18n="product.learn">Learn More</span> <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-            </div>
-          </article>
-
-          <article class="product-card" data-aos="fade-up" data-aos-delay="80">
-            <div class="product-img-wrap">
-              <img src="static/motor/3IK15RGN-C.png" alt="Servo Motor System" loading="lazy" width="260" height="260">
-            </div>
-            <div class="product-info">
-              <h3 data-i18n="product4.name">Servo Motor System</h3>
-              <p data-i18n="product4.desc">High-precision servo systems for CNC machinery, robotics, and automated assembly lines.</p>
-              <a href="#contact" class="product-link"><span data-i18n="product.learn">Learn More</span> <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-            </div>
-          </article>
-
-          <article class="product-card" data-aos="fade-up" data-aos-delay="120">
-            <div class="product-img-wrap">
-              <img src="static/motor/F-SERIES.png" alt="Industrial Automation Equipment F-Series" loading="lazy" width="260" height="260">
-            </div>
-            <div class="product-info">
-              <h3 data-i18n="product5.name">Industrial Automation Equipment</h3>
-              <p data-i18n="product5.desc">PLCs, HMIs, sensors, and control panels integrated for complete factory automation systems.</p>
-              <a href="#contact" class="product-link"><span data-i18n="product.learn">Learn More</span> <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-            </div>
-          </article>
-
-          <article class="product-card" data-aos="fade-up" data-aos-delay="160">
-            <div class="product-img-wrap">
-              <img src="static/motor/4IK30GN-CT.png" alt="Power Transmission Motor" loading="lazy" width="260" height="260">
-            </div>
-            <div class="product-info">
-              <h3 data-i18n="product6.name">Power Transmission Solutions</h3>
-              <p data-i18n="product6.desc">Couplings, pulleys, belts, and chain drives engineered for reliable torque transmission.</p>
-              <a href="#contact" class="product-link"><span data-i18n="product.learn">Learn More</span> <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ======================== SOLUTIONS ======================== -->
-    <section class="solutions" id="solutions">
-      <div class="container">
-        <div class="section-header" data-aos="fade-up">
-          <p class="section-eyebrow" data-i18n="solutions.eyebrow">Industries We Serve</p>
-          <h2 class="section-title" data-i18n="solutions.title">Industry Solutions</h2>
-          <p class="section-desc" data-i18n="solutions.desc">Tailored automation solutions for Vietnam's most demanding industries.</p>
-        </div>
-
-        <div class="solutions-grid">
-          <article class="solution-card" data-aos="zoom-in" data-aos-delay="60">
-            <div class="solution-icon"><i class="fa-solid fa-utensils" aria-hidden="true"></i></div>
-            <h3 data-i18n="sol1.name">Food Processing</h3>
-            <p data-i18n="sol1.desc">Hygienic drives and motors certified for food-safe environments. Precise speed control for mixing, filling, and conveying lines.</p>
-          </article>
-
-          <article class="solution-card" data-aos="zoom-in" data-aos-delay="100">
-            <div class="solution-icon"><i class="fa-solid fa-shirt" aria-hidden="true"></i></div>
-            <h3 data-i18n="sol2.name">Textile Industry</h3>
-            <p data-i18n="sol2.desc">Inverter-driven spindle and loom systems delivering consistent thread tension and fabric quality at any production speed.</p>
-          </article>
-
-          <article class="solution-card" data-aos="zoom-in" data-aos-delay="140">
-            <div class="solution-icon"><i class="fa-solid fa-truck-fast" aria-hidden="true"></i></div>
-            <h3 data-i18n="sol3.name">Logistics</h3>
-            <p data-i18n="sol3.desc">Conveyor and sorting systems with variable speed drives for throughput efficiency and gentle product handling.</p>
-          </article>
-
-          <article class="solution-card" data-aos="zoom-in" data-aos-delay="60">
-            <div class="solution-icon"><i class="fa-solid fa-fish" aria-hidden="true"></i></div>
-            <h3 data-i18n="sol4.name">Aquaculture</h3>
-            <p data-i18n="sol4.desc">Corrosion-resistant motors and pumps designed for humid, saline aquaculture environments with low-maintenance operation.</p>
-          </article>
-
-          <article class="solution-card" data-aos="zoom-in" data-aos-delay="100">
-            <div class="solution-icon"><i class="fa-solid fa-leaf" aria-hidden="true"></i></div>
-            <h3 data-i18n="sol5.name">Wood Pellet Manufacturing</h3>
-            <p data-i18n="sol5.desc">Heavy-duty gear motors and inverters for pellet mills, dryers, and conveyors handling high-torque biomass material.</p>
-          </article>
-
-          <article class="solution-card" data-aos="zoom-in" data-aos-delay="140">
-            <div class="solution-icon"><i class="fa-solid fa-recycle" aria-hidden="true"></i></div>
-            <h3 data-i18n="sol6.name">Recycling Plants</h3>
-            <p data-i18n="sol6.desc">Robust automation for shredders, balers, and sorting systems — built to handle variable loads and continuous operation.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ======================== STATS ======================== -->
-    <section class="stats" id="stats">
-      <div class="container">
-        <div class="section-header" data-aos="fade-up">
-          <p class="section-eyebrow" data-i18n="stats.eyebrow">Why Choose Us</p>
-          <h2 class="section-title section-title--light" data-i18n="stats.title">Trusted Across Vietnam</h2>
-        </div>
-        <div class="stats-grid">
-          <div class="stat-item" data-aos="fade-up" data-aos-delay="80">
-            <strong class="stat-number" data-target="100" data-suffix="+">0</strong>
-            <span class="stat-label" data-i18n="stat1.label">Projects Completed</span>
-          </div>
-          <div class="stat-item" data-aos="fade-up" data-aos-delay="160">
-            <strong class="stat-number" data-target="500" data-suffix="+">0</strong>
-            <span class="stat-label" data-i18n="stat2.label">Products Delivered</span>
-          </div>
-          <div class="stat-item" data-aos="fade-up" data-aos-delay="240">
-            <strong class="stat-number" data-target="18" data-suffix=" Mo">0</strong>
-            <span class="stat-label" data-i18n="stat3.label">Warranty Coverage</span>
-          </div>
-          <div class="stat-item" data-aos="fade-up" data-aos-delay="320">
-            <strong class="stat-number" data-target="63" data-suffix=" Prov">0</strong>
-            <span class="stat-label" data-i18n="stat4.label">Nationwide Support</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ======================== PROJECTS ======================== -->
-    <section class="projects" id="projects">
-      <div class="container">
-        <div class="section-header" data-aos="fade-up">
-          <p class="section-eyebrow" data-i18n="projects.eyebrow">Our Work</p>
-          <h2 class="section-title" data-i18n="projects.title">Featured Projects</h2>
-          <p class="section-desc" data-i18n="projects.desc">Real results from real deployments across Vietnam's manufacturing sector.</p>
-        </div>
-
-        <div class="swiper projects-swiper" data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper-wrapper">
-            <article class="swiper-slide project-card">
-              <div class="project-img">
-                <img src="static/Inverter/AV68-0-4R0G1.png" alt="ARINCO AV68 inverter installation" loading="lazy" width="600" height="360">
-                <div class="project-overlay"><span>View Project</span></div>
-              </div>
-              <div class="project-info">
-                <h3 data-i18n="proj1.title">Feed Mill Automation</h3>
-                <p data-i18n="proj1.desc">Installed ARINCO AV68 inverters across 12 conveyor lines at a major animal feed production facility in Long An, reducing energy consumption by 35%.</p>
-              </div>
-            </article>
-
-            <article class="swiper-slide project-card">
-              <div class="project-img">
-                <img src="static/motor/R-SERIES.png" alt="R-Series gear motor installation" loading="lazy" width="600" height="360">
-                <div class="project-overlay"><span>View Project</span></div>
-              </div>
-              <div class="project-info">
-                <h3 data-i18n="proj2.title">Textile Plant Upgrade</h3>
-                <p data-i18n="proj2.desc">Retrofitted 80+ spindle motors with R-Series gear motors at a textile factory in Binh Duong, increasing production speed by 20% with lower maintenance cost.</p>
-              </div>
-            </article>
-
-            <article class="swiper-slide project-card">
-              <div class="project-img">
-                <img src="static/Inverter/AU2-0-0R7G1.png" alt="ARINCO AU2 inverter pump control" loading="lazy" width="600" height="360">
-                <div class="project-overlay"><span>View Project</span></div>
-              </div>
-              <div class="project-info">
-                <h3 data-i18n="proj3.title">Aquaculture Pump Control</h3>
-                <p data-i18n="proj3.desc">Deployed ARINCO AU2 inverters to control aerator pumps at a shrimp farm in Ca Mau, enabling 24/7 automated oxygen management and cutting power bills by 28%.</p>
-              </div>
-            </article>
-
-            <article class="swiper-slide project-card">
-              <div class="project-img">
-                <img src="static/Inverter/AV23-0-0R7G1.png" alt="AV23 inverter wood pellet line" loading="lazy" width="600" height="360">
-                <div class="project-overlay"><span>View Project</span></div>
-              </div>
-              <div class="project-info">
-                <h3 data-i18n="proj4.title">Wood Pellet Production Line</h3>
-                <p data-i18n="proj4.desc">Engineered complete drive system for a biomass pellet manufacturer in Dong Nai, integrating AV23 inverters with PLC control for fully automated output.</p>
-              </div>
-            </article>
-          </div>
-          <div class="swiper-pagination"></div>
-          <div class="swiper-button-prev" aria-label="Previous project"></div>
-          <div class="swiper-button-next" aria-label="Next project"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ======================== CONTACT ======================== -->
-    <section class="contact" id="contact">
-      <div class="container">
-        <div class="section-header" data-aos="fade-up">
-          <p class="section-eyebrow" data-i18n="contact.eyebrow">Get In Touch</p>
-          <h2 class="section-title section-title--light" data-i18n="contact.title">Contact Us</h2>
-          <p class="section-desc section-desc--light" data-i18n="contact.desc">Ready to automate? Our team will respond within one business day.</p>
-        </div>
-
-        <div class="contact-grid">
-          <aside class="contact-info" data-aos="fade-right">
-            <div class="contact-item">
-              <div class="contact-icon"><i class="fa-solid fa-phone" aria-hidden="true"></i></div>
-              <div>
-                <p class="contact-label" data-i18n="contact.sales">Sales Hotline</p>
-                <a href="tel:+84886072780" class="contact-value">0886 072 780</a>
-              </div>
-            </div>
-            <div class="contact-item">
-              <div class="contact-icon"><i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i></div>
-              <div>
-                <p class="contact-label" data-i18n="contact.tech">Technical Hotline</p>
-                <a href="tel:+84886797590" class="contact-value">0886 797 590</a>
-              </div>
-            </div>
-            <div class="contact-item">
-              <div class="contact-icon"><i class="fa-solid fa-envelope" aria-hidden="true"></i></div>
-              <div>
-                <p class="contact-label" data-i18n="contact.email.label">Email</p>
-                <a href="mailto:ai.thienhotechnology@gmail.com" class="contact-value">ai.thienhotechnology@gmail.com</a>
-              </div>
-            </div>
-            <div class="contact-item">
-              <div class="contact-icon"><i class="fa-solid fa-globe" aria-hidden="true"></i></div>
-              <div>
-                <p class="contact-label" data-i18n="contact.website">Website</p>
-                <a href="https://congnghethienho.com" class="contact-value" target="_blank" rel="noopener noreferrer">congnghethienho.com</a>
-              </div>
-            </div>
-          </aside>
-
-          <div class="contact-form-wrap" data-aos="fade-left">
-            <form class="contact-form" id="contactForm" novalidate>
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="name"><span data-i18n="form.name">Full Name</span> <span class="req" aria-hidden="true">*</span></label>
-                  <input type="text" id="name" name="name" data-i18n-placeholder="form.name.ph" placeholder="Your full name" required aria-required="true">
-                  <span class="field-error" id="nameError" role="alert"></span>
-                </div>
-                <div class="form-group">
-                  <label for="company" data-i18n="form.company">Company</label>
-                  <input type="text" id="company" name="company" data-i18n-placeholder="form.company.ph" placeholder="Company name">
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="phone"><span data-i18n="form.phone">Phone</span> <span class="req" aria-hidden="true">*</span></label>
-                  <input type="tel" id="phone" name="phone" data-i18n-placeholder="form.phone.ph" placeholder="0xxx xxx xxx" required aria-required="true">
-                  <span class="field-error" id="phoneError" role="alert"></span>
-                </div>
-                <div class="form-group">
-                  <label for="email"><span data-i18n="form.email">Email</span> <span class="req" aria-hidden="true">*</span></label>
-                  <input type="email" id="email" name="email" data-i18n-placeholder="form.email.ph" placeholder="you@company.com" required aria-required="true">
-                  <span class="field-error" id="emailError" role="alert"></span>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="message"><span data-i18n="form.message">Message</span> <span class="req" aria-hidden="true">*</span></label>
-                <textarea id="message" name="message" rows="5" data-i18n-placeholder="form.message.ph" placeholder="Describe your project or inquiry..." required aria-required="true"></textarea>
-                <span class="field-error" id="messageError" role="alert"></span>
-              </div>
-              <button type="submit" class="btn btn-primary btn--full">
-                <span data-i18n="form.submit">Send Message</span>
-                <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
-              </button>
-              <p class="form-success" id="formSuccess" role="status" aria-live="polite"></p>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ======================== FOOTER ======================== -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="#home" class="nav-logo" aria-label="THIEN HO TECHNOLOGY - Home">
-            <img src="static/logo/image.png" alt="Thien Ho Technology Logo" width="40" height="40">
-            <span class="logo-text">THIEN HO <span class="logo-accent">TECHNOLOGY</span></span>
-          </a>
-          <p class="footer-tagline" data-i18n="footer.tagline">
-            Industrial Automation &amp; Power Transmission Solutions for Vietnam's manufacturing sector.
+          <h1 class="text-[clamp(2.6rem,5.5vw,4.2rem)] font-black leading-[1.02] tracking-tight text-dark mb-5">
+            Cắt giảm <span class="text-brand">35%</span> hóa đơn điện<br>
+            <span class="text-2xl lg:text-3xl font-normal text-muted">bằng biến tần ARINCO &amp; motor GIMO</span>
+          </h1>
+          <p class="text-muted text-base leading-relaxed max-w-[480px] mb-8">
+            Chúng tôi mang giải pháp tự động hóa công nghiệp đến nhà máy của bạn.
+            Hàng trăm dự án đã triển khai — hỗ trợ kỹ thuật tận xưởng 7 ngày/tuần.
           </p>
-          <div class="footer-social" role="list" aria-label="Social links">
-            <a href="#" class="social-link" aria-label="Facebook" role="listitem"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
-            <a href="#" class="social-link" aria-label="YouTube" role="listitem"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
-            <a href="#" class="social-link" aria-label="LinkedIn" role="listitem"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+          <div class="flex flex-wrap gap-3 mb-12">
+            <a href="#contact" class="px-8 py-4 bg-brand text-white font-semibold rounded text-sm hover:bg-[#d42a28] hover:-translate-y-0.5 hover:shadow-lg transition-all inline-flex items-center gap-2">
+              <i class="fa-solid fa-paper-plane"></i> Nhận báo giá miễn phí
+            </a>
+            <a href="#products" class="px-8 py-4 border border-gray-200 text-dark font-semibold rounded text-sm hover:border-brand hover:text-brand transition-all inline-flex items-center gap-2">
+              Xem sản phẩm <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+          <div class="flex items-center gap-8 flex-wrap">
+            <div><span class="text-3xl font-black text-dark" data-count="100">0</span><span class="text-brand font-bold align-top text-lg">+</span><p class="text-[0.6rem] uppercase tracking-widest text-muted mt-0.5">Dự án hoàn thành</p></div>
+            <div class="w-px h-10 bg-gray-200"></div>
+            <div><span class="text-3xl font-black text-dark" data-count="500">0</span><span class="text-brand font-bold align-top text-lg">+</span><p class="text-[0.6rem] uppercase tracking-widest text-muted mt-0.5">Sản phẩm cung cấp</p></div>
+            <div class="w-px h-10 bg-gray-200"></div>
+            <div><span class="text-3xl font-black text-dark" data-count="18">0</span><span class="text-brand font-bold align-top text-lg"> th</span><p class="text-[0.6rem] uppercase tracking-widest text-muted mt-0.5">Bảo hành</p></div>
+          </div>
+        </div>
+        <div class="relative flex items-center justify-center" data-aos="fade-left" data-aos-delay="200">
+          <div class="absolute w-[320px] h-[320px] lg:w-[420px] lg:h-[420px] rounded-full bg-gradient-to-br from-brand/10 via-teal/5 to-transparent animate-pulse-slow"></div>
+          <div class="relative z-10">
+            <img src="static/Inverter/AV68-0-4R0G1.png" alt="ARINCO AV68" class="w-[240px] h-[240px] lg:w-[360px] lg:h-[360px] object-contain drop-shadow-[0_30px_60px_rgba(237,49,47,0.15)] animate-float">
+          </div>
+          <div class="absolute top-[10%] right-[5%] z-20 bg-white px-4 py-2 rounded-lg shadow-lg border border-gray-100 text-xs font-semibold">0.4 – 630 kW</div>
+          <div class="absolute bottom-[15%] left-[5%] z-20 bg-white px-4 py-2 rounded-lg shadow-lg border border-gray-100 text-xs font-semibold text-teal">IP65</div>
+          <div class="absolute bottom-[15%] right-[5%] z-20 bg-white px-4 py-2 rounded-lg shadow-lg border border-gray-100 text-xs font-semibold text-brand">−35% điện</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ WHY THIEN HO ═══ -->
+  <section class="py-24 lg:py-32 bg-white" id="why">
+    <div class="max-w-[1200px] mx-auto px-5">
+      <div class="text-center max-w-[600px] mx-auto mb-20" data-aos="fade-up">
+        <p class="text-[0.65rem] font-bold uppercase tracking-[0.2em] text-brand mb-4">Tại sao Thiên Hổ?</p>
+        <h2 class="text-[clamp(2rem,4vw,3.2rem)] font-black leading-tight tracking-tight text-dark">
+          Bạn xứng đáng được<br>
+          <span class="text-brand">tư vấn đúng</span>, không phải bán hàng
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-gray-200 rounded-2xl overflow-hidden mb-20" data-aos="fade-up">
+        <div class="bg-white p-8 lg:p-10 text-center">
+          <div class="text-4xl font-black text-brand mb-2">100<span class="text-lg">+</span></div>
+          <p class="text-[0.6rem] uppercase tracking-widest text-muted mb-4">Dự án</p>
+          <p class="text-xs text-muted leading-relaxed">Từ feed mill, dệt may, thủy sản đến năng lượng — mỗi ngành một giải pháp riêng.</p>
+        </div>
+        <div class="bg-white p-8 lg:p-10 text-center">
+          <div class="text-4xl font-black text-teal mb-2">18<span class="text-lg">th</span></div>
+          <p class="text-[0.6rem] uppercase tracking-widest text-muted mb-4">Bảo hành</p>
+          <p class="text-xs text-muted leading-relaxed">Cam kết bảo hành 18 tháng — xử lý nhanh trong 3–5 ngày, không rườm rà.</p>
+        </div>
+        <div class="bg-white p-8 lg:p-10 text-center">
+          <div class="text-4xl font-black text-dark mb-2">63</div>
+          <p class="text-[0.6rem] uppercase tracking-widest text-muted mb-4">Tỉnh thành</p>
+          <p class="text-xs text-muted leading-relaxed">Phủ sóng toàn quốc. Có mặt tại các khu công nghiệp trọng điểm.</p>
+        </div>
+        <div class="bg-white p-8 lg:p-10 text-center">
+          <div class="text-4xl font-black text-dark mb-2">7<span class="text-lg">/7</span></div>
+          <p class="text-[0.6rem] uppercase tracking-widest text-muted mb-4">Hỗ trợ</p>
+          <p class="text-xs text-muted leading-relaxed">Kỹ sư giàu kinh nghiệm — hỗ trợ từ xa hoặc tận xưởng, kể cả thứ 7, CN.</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6" data-aos="fade-up">
+        <div class="relative p-8 bg-gradient-to-br from-brand/5 to-transparent border border-brand/10 rounded-2xl">
+          <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-brand/10 text-brand text-lg mb-5"><i class="fa-solid fa-bolt"></i></div>
+          <h3 class="text-lg font-bold text-dark mb-3">Vấn đề: Tiền điện cao</h3>
+          <p class="text-sm text-muted leading-relaxed mb-4">Motor chạy 100% công suất kể cả khi không tải. Hóa đơn điện mỗi tháng một tăng.</p>
+          <div class="flex items-start gap-3 text-sm"><i class="fa-solid fa-check-circle text-brand mt-0.5"></i><span><strong>Giải pháp:</strong> Biến tần ARINCO tự động điều chỉnh tốc độ theo tải thực. Giảm ngay 30–40% chi phí điện.</span></div>
+        </div>
+        <div class="relative p-8 bg-gradient-to-br from-teal/5 to-transparent border border-teal/10 rounded-2xl">
+          <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-teal/10 text-teal text-lg mb-5"><i class="fa-solid fa-gear"></i></div>
+          <h3 class="text-lg font-bold text-dark mb-3">Vấn đề: Máy móc hay hỏng</h3>
+          <p class="text-sm text-muted leading-relaxed mb-4">Motor cháy, gear box vỡ — sản xuất đình trệ, tốn tiền sửa, mất đơn hàng.</p>
+          <div class="flex items-start gap-3 text-sm"><i class="fa-solid fa-check-circle text-teal mt-0.5"></i><span><strong>Giải pháp:</strong> Motor giảm tốc GIMO — chịu tải nặng, vận hành êm, bảo hành 18 tháng, tuổi thọ cao.</span></div>
+        </div>
+        <div class="relative p-8 bg-gradient-to-br from-dark/5 to-transparent border border-dark/10 rounded-2xl">
+          <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-dark/10 text-dark text-lg mb-5"><i class="fa-solid fa-headset"></i></div>
+          <h3 class="text-lg font-bold text-dark mb-3">Vấn đề: Thiếu hỗ trợ</h3>
+          <p class="text-sm text-muted leading-relaxed mb-4">Mua hàng xong "khoán trắng" — không ai hướng dẫn, bảo trì, sửa chữa.</p>
+          <div class="flex items-start gap-3 text-sm"><i class="fa-solid fa-check-circle text-dark mt-0.5"></i><span><strong>Giải pháp:</strong> Đội ngũ kỹ sư hỗ trợ 7 ngày/tuần. Sẵn sàng đến tận xưởng lắp đặt, vận hành, bảo trì định kỳ.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FLAGSHIP PRODUCTS ═══ -->
+  <section class="py-24 lg:py-32 bg-[#f8f8fa]" id="products">
+    <div class="max-w-[1200px] mx-auto px-5">
+      <div class="text-center max-w-[600px] mx-auto mb-16" data-aos="fade-up">
+        <p class="text-[0.65rem] font-bold uppercase tracking-[0.2em] text-brand mb-4">Sản phẩm chủ lực</p>
+        <h2 class="text-[clamp(2rem,4vw,3.2rem)] font-black leading-tight tracking-tight text-dark">
+          Hai dòng sản phẩm<br>
+          <span class="text-brand">làm nên thương hiệu</span>
+        </h2>
+      </div>
+
+      <!-- ARINCO -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8" data-aos="fade-up">
+        <div class="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg transition-shadow">
+          <div class="flex flex-col lg:flex-row">
+            <div class="lg:w-[220px] shrink-0 bg-gradient-to-b from-brand/5 to-white flex items-center justify-center p-8 lg:p-10">
+              <img src="static/Inverter/AV68-0-4R0G1.png" alt="ARINCO AV68" class="w-36 h-36 object-contain" loading="lazy">
+            </div>
+            <div class="p-7 flex flex-col justify-center">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="text-[0.55rem] font-bold uppercase tracking-widest text-brand bg-brand/5 px-2 py-1 rounded">Bán chạy nhất</span>
+                <span class="text-[0.55rem] font-bold uppercase tracking-widest text-teal bg-teal/5 px-2 py-1 rounded">Hàn Quốc</span>
+              </div>
+              <h3 class="text-xl font-black text-dark mb-1">ARINCO AV68</h3>
+              <p class="text-sm text-muted mb-4">Biến tần điều khiển tốc độ motor công nghiệp. Tiết kiệm năng lượng vượt trội.</p>
+              <div class="grid grid-cols-2 gap-2 mb-5">
+                <div class="flex items-center gap-2 text-xs text-muted"><i class="fa-solid fa-check text-teal text-[0.5rem]"></i> 0.4 – 630 kW</div>
+                <div class="flex items-center gap-2 text-xs text-muted"><i class="fa-solid fa-check text-teal text-[0.5rem]"></i> IP65 chống bụi/nước</div>
+                <div class="flex items-center gap-2 text-xs text-muted"><i class="fa-solid fa-check text-teal text-[0.5rem]"></i> Tiết kiệm 30–40% điện</div>
+                <div class="flex items-center gap-2 text-xs text-muted"><i class="fa-solid fa-check text-teal text-[0.5rem]"></i> Bơm, quạt, băng tải...</div>
+              </div>
+              <a href="#contact" class="inline-flex items-center gap-2 px-5 py-2.5 bg-brand text-white font-semibold rounded text-xs hover:bg-[#d42a28] transition-colors w-fit">Báo giá ngay <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
           </div>
         </div>
 
-        <nav class="footer-col" aria-label="Quick links">
-          <h4 data-i18n="footer.quick">Quick Links</h4>
-          <ul role="list">
-            <li><a href="#home"      data-i18n="nav.home">Home</a></li>
-            <li><a href="#about"     data-i18n="nav.about">About</a></li>
-            <li><a href="#products"  data-i18n="nav.products">Products</a></li>
-            <li><a href="#solutions" data-i18n="nav.solutions">Solutions</a></li>
-            <li><a href="#projects"  data-i18n="nav.projects">Projects</a></li>
-            <li><a href="#contact"   data-i18n="nav.contact">Contact</a></li>
-          </ul>
-        </nav>
+        <!-- GIMO -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg transition-shadow">
+          <div class="flex flex-col lg:flex-row">
+            <div class="lg:w-[220px] shrink-0 bg-gradient-to-b from-teal/5 to-white flex items-center justify-center p-8 lg:p-10">
+              <img src="static/motor/GV22-0.2KW-5.png" alt="GIMO Gear Motor" class="w-36 h-36 object-contain" loading="lazy">
+            </div>
+            <div class="p-7 flex flex-col justify-center">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="text-[0.55rem] font-bold uppercase tracking-widest text-teal bg-teal/5 px-2 py-1 rounded">Chất lượng cao</span>
+                <span class="text-[0.55rem] font-bold uppercase tracking-widest text-brand bg-brand/5 px-2 py-1 rounded">Đài Loan</span>
+              </div>
+              <h3 class="text-xl font-black text-dark mb-1">GIMO Gear Motor</h3>
+              <p class="text-sm text-muted mb-4">Motor giảm tốc công nghiệp — bền bỉ, êm ái, phù hợp môi trường khắc nghiệt.</p>
+              <div class="grid grid-cols-2 gap-2 mb-5">
+                <div class="flex items-center gap-2 text-xs text-muted"><i class="fa-solid fa-check text-teal text-[0.5rem]"></i> Tỷ số 3:1 → 1500:1</div>
+                <div class="flex items-center gap-2 text-xs text-muted"><i class="fa-solid fa-check text-teal text-[0.5rem]"></i> Hiệu suất IE3</div>
+                <div class="flex items-center gap-2 text-xs text-muted"><i class="fa-solid fa-check text-teal text-[0.5rem]"></i> Vỏ gang / vỏ nhôm</div>
+                <div class="flex items-center gap-2 text-xs text-muted"><i class="fa-solid fa-check text-teal text-[0.5rem]"></i> Băng tải, máy trộn, nâng hạ</div>
+              </div>
+              <a href="#contact" class="inline-flex items-center gap-2 px-5 py-2.5 bg-brand text-white font-semibold rounded text-xs hover:bg-[#d42a28] transition-colors w-fit">Báo giá ngay <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-        <div class="footer-col">
-          <h4 data-i18n="footer.products">Products</h4>
-          <ul role="list">
-            <li><a href="#products" data-i18n="product1.name">ARINCO Inverter</a></li>
-            <li><a href="#products" data-i18n="product2.name">GIMO Gear Motor</a></li>
-            <li><a href="#products" data-i18n="product3.name">Three-Phase Electric Motor</a></li>
-            <li><a href="#products" data-i18n="product4.name">Servo Motor System</a></li>
-            <li><a href="#products" data-i18n="product5.name">Industrial Automation Equipment</a></li>
-            <li><a href="#products" data-i18n="product6.name">Power Transmission Solutions</a></li>
-          </ul>
+      <!-- Other categories -->
+      <div class="text-center" data-aos="fade-up">
+        <p class="text-xs text-muted mb-4">Ngoài ra, Thiên Hổ còn cung cấp:</p>
+        <div class="flex flex-wrap justify-center gap-3">
+          <span class="px-4 py-2 bg-white border border-gray-200 rounded-full text-xs text-muted">Motor 3 pha GYE3</span>
+          <span class="px-4 py-2 bg-white border border-gray-200 rounded-full text-xs text-muted">Motor Servo GIMO</span>
+          <span class="px-4 py-2 bg-white border border-gray-200 rounded-full text-xs text-muted">Thiết bị đóng cắt</span>
+          <span class="px-4 py-2 bg-white border border-gray-200 rounded-full text-xs text-muted">Phụ kiện tự động hóa</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PROJECTS ═══ -->
+  <section class="py-24 lg:py-32 bg-white" id="projects">
+    <div class="max-w-[1200px] mx-auto px-5">
+      <div class="text-center max-w-[600px] mx-auto mb-16" data-aos="fade-up">
+        <p class="text-[0.65rem] font-bold uppercase tracking-[0.2em] text-brand mb-4">Dự án tiêu biểu</p>
+        <h2 class="text-[clamp(2rem,4vw,3.2rem)] font-black leading-tight tracking-tight text-dark">
+          Không phải lời hứa —<br>
+          <span class="text-brand">kết quả thực tế</span>
+        </h2>
+      </div>
+
+      <!-- Project 1 -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+        <div class="bg-[#f8f8fa] rounded-2xl overflow-hidden flex hover:shadow-md transition-shadow" data-aos="fade-right">
+          <div class="w-[160px] shrink-0 bg-white flex items-center justify-center p-5 border-r border-gray-100">
+            <img src="static/Inverter/AV68-0-4R0G1.png" alt="ARINCO AV68" class="w-24 h-24 object-contain" loading="lazy">
+          </div>
+          <div class="p-6 flex flex-col justify-center">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-2xl font-black text-gray-200 leading-none">01</span>
+              <span class="text-[0.5rem] font-bold uppercase tracking-widest text-teal bg-teal/10 px-2 py-0.5 rounded-full">Long An</span>
+            </div>
+            <h3 class="text-sm font-bold text-dark mb-1">Feed Mill Automation</h3>
+            <p class="text-xs text-muted leading-relaxed mb-2">12 băng tải với ARINCO AV68. Giảm 35% điện năng.</p>
+            <div class="flex items-center gap-2"><span class="text-lg font-black text-brand">35%</span><span class="text-[0.55rem] uppercase tracking-widest text-muted">Tiết kiệm</span></div>
+          </div>
         </div>
 
-        <address class="footer-col footer-contact-col" aria-label="Contact information">
-          <h4 data-i18n="footer.contact">Contact</h4>
-          <p><i class="fa-solid fa-phone" aria-hidden="true"></i> <a href="tel:+84886072780">0886 072 780</a></p>
-          <p><i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i> <a href="tel:+84886797590">0886 797 590</a></p>
-          <p><i class="fa-solid fa-envelope" aria-hidden="true"></i> <a href="mailto:ai.thienhotechnology@gmail.com">ai.thienhotechnology@gmail.com</a></p>
-          <p><i class="fa-solid fa-globe" aria-hidden="true"></i> <a href="https://congnghethienho.com" target="_blank" rel="noopener noreferrer">congnghethienho.com</a></p>
-        </address>
+        <div class="bg-[#f8f8fa] rounded-2xl overflow-hidden flex hover:shadow-md transition-shadow" data-aos="fade-left">
+          <div class="w-[160px] shrink-0 bg-white flex items-center justify-center p-5 border-r border-gray-100">
+            <img src="static/motor/R-SERIES.png" alt="GIMO R-Series" class="w-24 h-24 object-contain" loading="lazy">
+          </div>
+          <div class="p-6 flex flex-col justify-center">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-2xl font-black text-gray-200 leading-none">02</span>
+              <span class="text-[0.5rem] font-bold uppercase tracking-widest text-teal bg-teal/10 px-2 py-0.5 rounded-full">Bình Dương</span>
+            </div>
+            <h3 class="text-sm font-bold text-dark mb-1">Textile Plant Upgrade</h3>
+            <p class="text-xs text-muted leading-relaxed mb-2">80+ motor R-Series. Tăng 20% tốc độ sản xuất.</p>
+            <div class="flex items-center gap-2"><span class="text-lg font-black text-brand">20%</span><span class="text-[0.55rem] uppercase tracking-widest text-muted">Năng suất</span></div>
+          </div>
+        </div>
       </div>
 
-      <div class="footer-bottom">
-        <p data-i18n="footer.copyright">&copy; 2026 THIEN HO TECHNOLOGY. All rights reserved.</p>
-        <p data-i18n="footer.sub">Industrial Automation &amp; Power Transmission Solutions</p>
+      <!-- Project 3 & 4 -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6" data-aos="fade-up">
+        <div class="bg-[#f8f8fa] rounded-2xl overflow-hidden flex hover:shadow-md transition-shadow">
+          <div class="w-[160px] shrink-0 bg-white flex items-center justify-center p-5 border-r border-gray-100">
+            <img src="static/Inverter/AU2-0-0R7G1.png" alt="ARINCO AU2" class="w-24 h-24 object-contain" loading="lazy">
+          </div>
+          <div class="p-6 flex flex-col justify-center">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-2xl font-black text-gray-200 leading-none">03</span>
+              <span class="text-[0.5rem] font-bold uppercase tracking-widest text-teal bg-teal/10 px-2 py-0.5 rounded-full">Cà Mau</span>
+            </div>
+            <h3 class="text-sm font-bold text-dark mb-1">Aquaculture Pump Control</h3>
+            <p class="text-xs text-muted leading-relaxed mb-2">ARINCO AU2 tự động hóa 24/7. Giảm 28% tiền điện.</p>
+            <div class="flex items-center gap-2"><span class="text-lg font-black text-brand">28%</span><span class="text-[0.55rem] uppercase tracking-widest text-muted">Tiết kiệm</span></div>
+          </div>
+        </div>
+
+        <div class="bg-[#f8f8fa] rounded-2xl overflow-hidden flex hover:shadow-md transition-shadow">
+          <div class="w-[160px] shrink-0 bg-white flex items-center justify-center p-5 border-r border-gray-100">
+            <img src="static/Inverter/AV23-0-0R7G1.png" alt="ARINCO AV23" class="w-24 h-24 object-contain" loading="lazy">
+          </div>
+          <div class="p-6 flex flex-col justify-center">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-2xl font-black text-gray-200 leading-none">04</span>
+              <span class="text-[0.5rem] font-bold uppercase tracking-widest text-teal bg-teal/10 px-2 py-0.5 rounded-full">Đồng Nai</span>
+            </div>
+            <h3 class="text-sm font-bold text-dark mb-1">Wood Pellet Production</h3>
+            <p class="text-xs text-muted leading-relaxed mb-2">AV23 + PLC — dây chuyền tự động hoàn toàn.</p>
+            <div class="flex items-center gap-2"><span class="text-lg font-black text-brand">100%</span><span class="text-[0.55rem] uppercase tracking-widest text-muted">Tự động</span></div>
+          </div>
+        </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ═══ CTA BANNER + CONTACT ═══ -->
+  <section class="relative overflow-hidden" id="contact">
+    <div class="absolute inset-0 bg-gradient-to-br from-brand via-[#d42a28] to-dark/90"></div>
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 25% 50%, white 1px, transparent 1px); background-size: 40px 40px;"></div>
+    <div class="relative max-w-[1200px] mx-auto px-5 py-24 lg:py-32">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div class="text-white" data-aos="fade-right">
+          <p class="text-[0.65rem] font-bold uppercase tracking-[0.2em] text-white/60 mb-4">Bắt đầu ngay</p>
+          <h2 class="text-[clamp(2rem,4vw,3.2rem)] font-black leading-tight mb-5">
+            Nhận báo giá<br>
+            <span class="text-white/80">trong 2 giờ</span>
+          </h2>
+          <p class="text-white/70 text-sm leading-relaxed max-w-[420px] mb-8">
+            Điền thông tin hoặc gọi trực tiếp. Đội ngũ kỹ thuật của Thiên Hổ sẽ tư vấn giải pháp phù hợp nhất cho nhà máy của bạn.
+          </p>
+          <div class="flex flex-col gap-3">
+            <a href="tel:0886072780" class="flex items-center gap-4 bg-white/10 backdrop-blur-sm rounded-xl px-5 py-4 hover:bg-white/20 transition-colors">
+              <div class="w-10 h-10 flex items-center justify-center rounded-lg bg-white/20 text-white text-sm"><i class="fa-solid fa-phone"></i></div>
+              <div><div class="text-[0.55rem] uppercase tracking-widest text-white/50">Miền Nam</div><div class="text-sm font-semibold">0886 072 780 <span class="text-white/60 font-normal text-xs">(Mr. Nam)</span></div></div>
+            </a>
+            <a href="tel:0968168130" class="flex items-center gap-4 bg-white/10 backdrop-blur-sm rounded-xl px-5 py-4 hover:bg-white/20 transition-colors">
+              <div class="w-10 h-10 flex items-center justify-center rounded-lg bg-white/20 text-white text-sm"><i class="fa-solid fa-phone"></i></div>
+              <div><div class="text-[0.55rem] uppercase tracking-widest text-white/50">Miền Bắc</div><div class="text-sm font-semibold">0968 168 130 <span class="text-white/60 font-normal text-xs">(Mr. Kỳ)</span></div></div>
+            </a>
+            <a href="tel:0886797590" class="flex items-center gap-4 bg-white/10 backdrop-blur-sm rounded-xl px-5 py-4 hover:bg-white/20 transition-colors">
+              <div class="w-10 h-10 flex items-center justify-center rounded-lg bg-white/20 text-white text-sm"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+              <div><div class="text-[0.55rem] uppercase tracking-widest text-white/50">Kỹ thuật</div><div class="text-sm font-semibold">0886 797 590 <span class="text-white/60 font-normal text-xs">(Mr. Thịnh)</span></div></div>
+            </a>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl p-8 lg:p-10 shadow-2xl" data-aos="fade-left">
+          <p class="text-sm font-bold text-dark mb-1">Gửi yêu cầu tư vấn</p>
+          <p class="text-xs text-muted mb-6">Chúng tôi sẽ phản hồi trong vòng 2 giờ làm việc.</p>
+          <form id="contactForm" novalidate class="flex flex-col gap-4">
+            <div>
+              <input type="text" id="cfName" placeholder="Tên của bạn *" required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-sm text-dark outline-none focus:border-brand focus:ring-2 focus:ring-red-50 transition-colors placeholder:text-gray-300">
+              <span class="field-err" id="cfNameErr"></span>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <input type="tel" id="cfPhone" placeholder="Số điện thoại *" required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-sm text-dark outline-none focus:border-brand focus:ring-2 focus:ring-red-50 transition-colors placeholder:text-gray-300">
+                <span class="field-err" id="cfPhoneErr"></span>
+              </div>
+              <div>
+                <input type="email" id="cfEmail" placeholder="Email" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-sm text-dark outline-none focus:border-brand focus:ring-2 focus:ring-red-50 transition-colors placeholder:text-gray-300">
+                <span class="field-err" id="cfEmailErr"></span>
+              </div>
+            </div>
+            <div>
+              <textarea id="cfMsg" rows="3" placeholder="Sản phẩm / số lượng / yêu cầu..." required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-sm text-dark outline-none focus:border-brand focus:ring-2 focus:ring-red-50 transition-colors placeholder:text-gray-300 resize-none"></textarea>
+              <span class="field-err" id="cfMsgErr"></span>
+            </div>
+            <button type="submit" class="w-full py-3.5 bg-brand text-white font-semibold rounded-lg text-sm hover:bg-[#d42a28] transition-colors inline-flex items-center justify-center gap-2">
+              Gửi yêu cầu <i class="fa-solid fa-paper-plane"></i>
+            </button>
+            <p class="form-success text-center text-xs" id="cfSuccess"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="bg-[#1a1a2e] text-white/50 pt-16 pb-0">
+    <div class="max-w-[1200px] mx-auto px-5">
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-10 pb-10 border-b border-white/10">
+        <div>
+          <div class="flex items-center gap-2.5 mb-4">
+            <svg width="28" height="28" viewBox="0 0 40 40" fill="none">
+              <polygon points="20,3 34,11 34,29 20,37 6,29 6,11" fill="none" stroke="#ED312F" stroke-width="1.5"/>
+              <polygon points="12,12 9,6 16,10" fill="#ED312F"/><polygon points="28,12 31,6 24,10" fill="#ED312F"/>
+              <polygon points="8,14 20,16 14,26 10,22" fill="#ED312F"/><polygon points="32,14 20,16 26,26 30,22" fill="#2563EB"/>
+              <polygon points="13,17 15,15 17,17 15,19" fill="#fff"/><polygon points="23,17 25,15 27,17 25,19" fill="#fff"/>
+              <circle cx="15" cy="17" r="1.5" fill="#1a1a2e"/><circle cx="25" cy="17" r="1.5" fill="#1a1a2e"/>
+              <polygon points="20,21 18,23 22,23" fill="#ED312F"/>
+              <path d="M14 25 Q20 30 26 25" stroke="#ED312F" stroke-width="1" fill="none" stroke-linecap="round"/>
+              <line x1="6" y1="20" x2="13" y2="22" stroke="#ED312F" stroke-width="0.8" stroke-linecap="round"/>
+              <line x1="5" y1="23" x2="12" y2="24" stroke="#ED312F" stroke-width="0.8" stroke-linecap="round"/>
+              <line x1="34" y1="20" x2="27" y2="22" stroke="#ED312F" stroke-width="0.8" stroke-linecap="round"/>
+              <line x1="35" y1="23" x2="28" y2="24" stroke="#ED312F" stroke-width="0.8" stroke-linecap="round"/>
+            </svg>
+            <span class="font-extrabold tracking-tight text-white text-sm">THIÊN HỔ <span class="text-brand">TECH</span></span>
+          </div>
+          <p class="text-xs leading-relaxed text-white/40">Nhà phân phối biến tần ARINCO, motor giảm tốc GIMO và giải pháp tự động hóa công nghiệp tại Việt Nam.</p>
+        </div>
+        <div>
+          <h4 class="text-[0.6rem] font-bold uppercase tracking-widest text-white mb-4">Sản phẩm</h4>
+          <ul class="flex flex-col gap-2">
+            <li><a href="#products" class="text-xs text-white/40 hover:text-yellow-300 transition-colors">Biến tần ARINCO</a></li>
+            <li><a href="#products" class="text-xs text-white/40 hover:text-yellow-300 transition-colors">Motor giảm tốc GIMO</a></li>
+            <li><a href="#products" class="text-xs text-white/40 hover:text-yellow-300 transition-colors">Motor 3 pha</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-[0.6rem] font-bold uppercase tracking-widest text-white mb-4">Liên hệ</h4>
+          <ul class="flex flex-col gap-2 text-xs text-white/40">
+            <li><a href="tel:0886072780" class="hover:text-yellow-300 transition-colors">0886 072 780 (Mr. Nam)</a></li>
+            <li><a href="tel:0968168130" class="hover:text-yellow-300 transition-colors">0968 168 130 (Mr. Kỳ)</a></li>
+            <li><a href="mailto:ai.thienhotechnology@gmail.com" class="hover:text-yellow-300 transition-colors break-all">ai.thienhotechnology@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="text-center py-5 text-[0.65rem] text-white/20">&copy; 2026 CÔNG TY TNHH CÔNG NGHỆ THIÊN HỔ</div>
     </div>
   </footer>
 
-  <!-- Back to Top -->
-  <button class="back-to-top" id="backToTop" aria-label="Back to top">
-    <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
-  </button>
+  <!-- Floating CTA -->
+  <div class="fixed bottom-6 left-6 z-40 flex flex-col gap-2">
+    <a href="tel:0886072780" class="w-12 h-12 flex items-center justify-center rounded-full bg-brand text-white shadow-lg hover:scale-110 transition-transform"><i class="fa-solid fa-phone text-lg"></i></a>
+    <a href="https://zalo.me/0886072780" target="_blank" class="w-12 h-12 flex items-center justify-center rounded-full bg-blue-600 text-white shadow-lg hover:scale-110 transition-transform"><i class="fa-solid fa-comment-dots text-lg"></i></a>
+  </div>
 
-  <!-- AOS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <!-- SwiperJS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <!-- Custom JS -->
   <script src="script.js"></script>
 </body>
 </html>

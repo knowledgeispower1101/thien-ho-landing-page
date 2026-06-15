@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://congnghethienho.com/sitemap.xml
+
+# Disallow admin or private paths if they exist
+Disallow: /admin/
+Disallow: /private/
