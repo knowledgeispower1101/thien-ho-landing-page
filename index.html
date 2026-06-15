@@ -15,7 +15,7 @@
   <link rel="icon" type="image/x-icon" href="https://congnghethienho.com/upload/photo/logo-1753087636.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Stardos+Stencil:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 
@@ -29,25 +29,26 @@
 <body class="bg-[#f8f8fa] text-dark antialiased">
 
   <!-- ═══ NAV ═══ -->
-  <header class="fixed top-0 left-0 right-0 z-50 h-16 flex items-center" id="header">
+  <header class="header fixed top-0 left-0 right-0 z-50 h-20 flex items-center" id="header">
     <nav class="max-w-[1200px] mx-auto px-5 w-full flex items-center justify-between">
-      <a href="#" class="flex items-center shrink-0">
-        <img src="static/logo/logo-thienho-high.png" alt="Thiên Hổ Technology" class="h-12 w-auto" loading="lazy">
+      <a href="#" class="logo-mark shrink-0" aria-label="Thiên Hổ Technology">
+        <span class="logo-top">THIÊN HỔ</span>
+        <span class="logo-bottom">TECHNOLOGY</span>
       </a>
       <div class="hidden lg:flex items-center gap-1">
-        <a href="#why" class="px-4 py-2 text-sm text-muted hover:text-brand transition-colors">Tại sao</a>
-        <a href="#products" class="px-4 py-2 text-sm text-muted hover:text-brand transition-colors">Sản phẩm</a>
-        <a href="#projects" class="px-4 py-2 text-sm text-muted hover:text-brand transition-colors">Dự án</a>
-        <a href="#contact" class="ml-3 px-5 py-2 text-sm font-semibold bg-brand text-white rounded hover:bg-[#d42a28] transition-colors">Nhận báo giá</a>
+        <a href="#why" class="nav-link px-4 py-2 text-sm font-medium transition-colors">Tại sao</a>
+        <a href="#products" class="nav-link px-4 py-2 text-sm font-medium transition-colors">Sản phẩm</a>
+        <a href="#projects" class="nav-link px-4 py-2 text-sm font-medium transition-colors">Dự án</a>
+        <a href="#contact" class="nav-cta ml-3 px-5 py-2 text-sm font-semibold rounded transition-colors">Nhận báo giá</a>
       </div>
-      <a href="tel:0886072780" class="hidden sm:flex items-center gap-1.5 text-sm font-semibold text-brand"><i class="fa-solid fa-phone text-xs"></i> 0886 072 780</a>
+      <a href="tel:0886072780" class="phone-link hidden sm:flex items-center gap-1.5 text-sm font-semibold"><i class="fa-solid fa-phone text-xs"></i> 0886 072 780</a>
       <button class="lg:hidden flex flex-col gap-1 p-1 hamburger" id="hamburger" aria-label="Menu">
-        <span class="block w-5 h-[2px] bg-dark rounded transition-all"></span>
-        <span class="block w-5 h-[2px] bg-dark rounded transition-all"></span>
-        <span class="block w-5 h-[2px] bg-dark rounded transition-all"></span>
+        <span class="hamburger-bar block w-5 h-[2px] rounded transition-all"></span>
+        <span class="hamburger-bar block w-5 h-[2px] rounded transition-all"></span>
+        <span class="hamburger-bar block w-5 h-[2px] rounded transition-all"></span>
       </button>
     </nav>
-    <div class="hidden mobile-nav" id="mobileNav">
+    <div class="mobile-nav" id="mobileNav">
       <a href="#why" class="block px-5 py-3 text-sm text-muted hover:text-brand border-b border-gray-100">Tại sao chọn Thiên Hổ</a>
       <a href="#products" class="block px-5 py-3 text-sm text-muted hover:text-brand border-b border-gray-100">Sản phẩm</a>
       <a href="#projects" class="block px-5 py-3 text-sm text-muted hover:text-brand border-b border-gray-100">Dự án</a>
@@ -56,7 +57,7 @@
   </header>
 
   <!-- ═══ HERO ═══ -->
-  <section class="min-h-screen flex items-center pt-16 relative overflow-hidden bg-gradient-to-br from-[#f8f8fa] via-white to-[#fef2f2]">
+  <section class="min-h-screen flex items-center pt-20 relative overflow-hidden bg-gradient-to-br from-[#f8f8fa] via-white to-[#fef2f2]">
     <div class="max-w-[1200px] mx-auto px-5 w-full py-16 lg:py-0">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div data-aos="fade-up">
@@ -254,82 +255,81 @@
   </section>
 
   <!-- ═══ PROJECTS ═══ -->
-  <section class="py-24 lg:py-32 bg-white" id="projects">
+  <section class="py-24 lg:py-32 bg-[#0d1117]" id="projects">
     <div class="max-w-[1200px] mx-auto px-5">
-      <div class="text-center max-w-[600px] mx-auto mb-16" data-aos="fade-up">
-        <p class="text-[0.65rem] font-bold uppercase tracking-[0.2em] text-brand mb-4">Dự án tiêu biểu</p>
-        <h2 class="text-[clamp(2rem,4vw,3.2rem)] font-black leading-tight tracking-tight text-dark">
-          Không phải lời hứa —<br>
-          <span class="text-brand">kết quả thực tế</span>
-        </h2>
+      <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-12" data-aos="fade-up">
+        <div>
+          <p class="text-[0.65rem] font-bold uppercase tracking-[0.2em] text-brand mb-3">Dự án tiêu biểu</p>
+          <h2 class="text-[clamp(2rem,4vw,3rem)] font-black leading-tight tracking-tight text-white">
+            Không phải lời hứa —<br>
+            <span class="text-brand">kết quả thực tế</span>
+          </h2>
+        </div>
+        <p class="text-sm text-white/50 max-w-[240px] sm:text-right leading-relaxed">Số liệu đo lường tại công trình, không phải ước tính.</p>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
-        <!-- Project 1: Bồn khuấy -->
-        <div class="bg-[#f8f8fa] rounded-2xl overflow-hidden flex hover:shadow-md transition-shadow" data-aos="fade-right">
-          <div class="w-[160px] shrink-0 bg-white flex items-center justify-center p-5 border-r border-gray-100">
-            <img src="static/projects/mixer-system.png" alt="Hệ thống bồn khuấy" class="w-24 h-24 object-cover" loading="lazy">
-          </div>
-          <div class="p-6 flex flex-col justify-center">
-            <div class="flex items-center gap-2 mb-2">
-              <span class="text-2xl font-black text-gray-200 leading-none">01</span>
-              <span class="text-[0.5rem] font-semibold uppercase tracking-widest text-teal bg-teal/10 px-2 py-0.5 rounded-full">Motor 5.5kW</span>
-            </div>
-            <h3 class="text-sm font-bold text-dark mb-1">Hệ thống bồn khuấy công nghiệp</h3>
-            <p class="text-xs text-muted leading-relaxed mb-2">16 motor GIMO cho bồn khuấy. Giảm 22% điện, tốc độ khuấy đồng đều, tiếng ồn giảm 30%.</p>
-            <div class="flex items-center gap-2"><span class="text-lg font-black text-brand">22%</span><span class="text-[0.55rem] uppercase tracking-widest text-muted">Tiết kiệm điện</span></div>
-          </div>
-        </div>
+      <div class="projects-bento">
 
-        <!-- Project 2: Nhà máy gạch -->
-        <div class="bg-[#f8f8fa] rounded-2xl overflow-hidden flex hover:shadow-md transition-shadow" data-aos="fade-left">
-          <div class="w-[160px] shrink-0 bg-white flex items-center justify-center p-5 border-r border-gray-100">
-            <img src="static/projects/brick-factory.png" alt="Nhà máy gạch" class="w-24 h-24 object-cover" loading="lazy">
+        <!-- Featured: Bồn khuấy -->
+        <article class="project-card project-card--span2" data-aos="fade-right">
+          <img src="static/projects/mixer-system.png" alt="Hệ thống bồn khuấy công nghiệp" loading="lazy">
+          <div class="project-card__overlay"></div>
+          <div class="project-card__content">
+            <span class="project-card__tag">GIMO Motor 5.5kW × 16 bộ</span>
+            <div class="project-card__stat">−22%</div>
+            <h3 class="project-card__title">Hệ thống bồn khuấy công nghiệp</h3>
+            <p class="project-card__desc">16 motor GIMO thay thế đồng loạt — tiết kiệm điện 22%, tiếng ồn giảm 30%, tốc độ khuấy đồng đều hơn.</p>
           </div>
-          <div class="p-6 flex flex-col justify-center">
-            <div class="flex items-center gap-2 mb-2">
-              <span class="text-2xl font-black text-gray-200 leading-none">02</span>
-              <span class="text-[0.5rem] font-semibold uppercase tracking-widest text-teal bg-teal/10 px-2 py-0.5 rounded-full">Biến tần 37kW</span>
-            </div>
-            <h3 class="text-sm font-bold text-dark mb-1">Nhà máy gạch</h3>
-            <p class="text-xs text-muted leading-relaxed mb-2">2 biến tần 37kW cho nhà máy gạch. Khởi động êm, giảm sốc cơ khí, dòng điện ổn định.</p>
-            <div class="flex items-center gap-2"><span class="text-lg font-black text-brand">Giảm</span><span class="text-[0.55rem] uppercase tracking-widest text-muted">Sốc cơ khí</span></div>
-          </div>
-        </div>
-      </div>
+        </article>
 
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <!-- Project 3: Máy đùn nhựa -->
-        <div class="bg-[#f8f8fa] rounded-2xl overflow-hidden flex hover:shadow-md transition-shadow" data-aos="fade-up">
-          <div class="w-[160px] shrink-0 bg-white flex items-center justify-center p-5 border-r border-gray-100">
-            <img src="static/projects/plastic-extruder.png" alt="Máy đùn nhựa" class="w-24 h-24 object-cover" loading="lazy">
+        <!-- Nhà máy gạch -->
+        <article class="project-card" data-aos="fade-left">
+          <img src="static/projects/brick-factory.png" alt="Nhà máy gạch" loading="lazy">
+          <div class="project-card__overlay"></div>
+          <div class="project-card__content">
+            <span class="project-card__tag">ARINCO Biến tần 37kW</span>
+            <div class="project-card__stat">Êm</div>
+            <h3 class="project-card__title">Nhà máy gạch</h3>
+            <p class="project-card__desc">Khởi động êm, loại bỏ sốc cơ khí, dòng điện ổn định suốt ca sản xuất.</p>
           </div>
-          <div class="p-6 flex flex-col justify-center">
-            <div class="flex items-center gap-2 mb-2">
-              <span class="text-2xl font-black text-gray-200 leading-none">03</span>
-              <span class="text-[0.5rem] font-semibold uppercase tracking-widest text-teal bg-teal/10 px-2 py-0.5 rounded-full">Biến tần 355kW</span>
-            </div>
-            <h3 class="text-sm font-bold text-dark mb-1">Máy đùn nhựa</h3>
-            <p class="text-xs text-muted leading-relaxed mb-2">ARINCO AV68 355kW cho máy đùn nhựa. Hạn chế sụt tốc khi tải tăng, vận hành liên tục.</p>
-            <div class="flex items-center gap-2"><span class="text-lg font-black text-brand">Ổn định</span><span class="text-[0.55rem] uppercase tracking-widest text-muted">Vận hành</span></div>
-          </div>
-        </div>
+        </article>
 
-        <!-- Project 4: Máy nghiền rác -->
-        <div class="bg-[#f8f8fa] rounded-2xl overflow-hidden flex hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="100">
-          <div class="w-[160px] shrink-0 bg-white flex items-center justify-center p-5 border-r border-gray-100">
-            <img src="static/projects/shredder-1.png" alt="Máy nghiền rác" class="w-24 h-24 object-cover" loading="lazy">
+        <!-- Máy đùn nhựa -->
+        <article class="project-card" data-aos="fade-up">
+          <img src="static/projects/plastic-extruder.png" alt="Máy đùn nhựa" loading="lazy">
+          <div class="project-card__overlay"></div>
+          <div class="project-card__content">
+            <span class="project-card__tag">ARINCO AV68 355kW</span>
+            <div class="project-card__stat">Ổn định</div>
+            <h3 class="project-card__title">Máy đùn nhựa</h3>
+            <p class="project-card__desc">Không sụt tốc khi tải tăng đột ngột — vận hành liên tục 24/7.</p>
           </div>
-          <div class="p-6 flex flex-col justify-center">
-            <div class="flex items-center gap-2 mb-2">
-              <span class="text-2xl font-black text-gray-200 leading-none">04</span>
-              <span class="text-[0.5rem] font-semibold uppercase tracking-widest text-teal bg-teal/10 px-2 py-0.5 rounded-full">Biến tần 400kW</span>
-            </div>
-            <h3 class="text-sm font-bold text-dark mb-1">Máy nghiền rác</h3>
-            <p class="text-xs text-muted leading-relaxed mb-2">ARINCO 400kW cho tái chế rác thải. Tiết kiệm 22–27% điện, dòng khởi động giảm 60%, hiệu suất nghiền tăng 15%.</p>
-            <div class="flex items-center gap-2"><span class="text-lg font-black text-brand">22–27%</span><span class="text-[0.55rem] uppercase tracking-widest text-muted">Tiết kiệm điện</span></div>
+        </article>
+
+        <!-- Máy nghiền rác 1 -->
+        <article class="project-card" data-aos="fade-up" data-aos-delay="80">
+          <img src="static/projects/shredder-1.png" alt="Máy nghiền rác thải" loading="lazy">
+          <div class="project-card__overlay"></div>
+          <div class="project-card__content">
+            <span class="project-card__tag">ARINCO 400kW — Tái chế</span>
+            <div class="project-card__stat">−27%</div>
+            <h3 class="project-card__title">Máy nghiền rác thải</h3>
+            <p class="project-card__desc">Tiết kiệm 22–27% điện năng, dòng khởi động giảm 60%.</p>
           </div>
-        </div>
+        </article>
+
+        <!-- Máy nghiền rác 2 -->
+        <article class="project-card" data-aos="fade-up" data-aos-delay="160">
+          <img src="static/projects/shredder-2.png" alt="Hệ thống nghiền công suất lớn" loading="lazy">
+          <div class="project-card__overlay"></div>
+          <div class="project-card__content">
+            <span class="project-card__tag">Công suất lớn</span>
+            <div class="project-card__stat">+15%</div>
+            <h3 class="project-card__title">Hệ thống nghiền công suất lớn</h3>
+            <p class="project-card__desc">Hiệu suất nghiền tăng 15%, vận hành ổn định không gián đoạn.</p>
+          </div>
+        </article>
+
       </div>
     </div>
   </section>
@@ -402,7 +402,10 @@
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-10 pb-10 border-b border-white/10">
         <div>
           <div class="flex items-center mb-4">
-            <img src="static/logo/logo-thienho-high.png" alt="Thiên Hổ Technology" class="h-10 w-auto" loading="lazy">
+            <div class="logo-mark logo-mark--footer" aria-label="Thiên Hổ Technology">
+              <span class="logo-top">THIÊN HỔ</span>
+              <span class="logo-bottom">TECHNOLOGY</span>
+            </div>
           </div>
           <p class="text-xs leading-relaxed text-white/40">Nhà phân phối biến tần ARINCO, motor GIMO và giải pháp tự động hóa công nghiệp tại Việt Nam.</p>
         </div>

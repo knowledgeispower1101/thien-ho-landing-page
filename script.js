@@ -23,9 +23,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ── Sticky Header ── */
   const header = document.getElementById('header');
-  window.addEventListener('scroll', () => {
-    if (header) header.classList.toggle('scrolled', window.scrollY > 60);
-  }, { passive: true });
+
+  function updateHeader() {
+    if (!header) return;
+    header.classList.toggle('scrolled', window.scrollY > 60);
+  }
+
+  window.addEventListener('scroll', updateHeader, { passive: true });
+  updateHeader();
 
   /* ── Smooth Scroll ── */
   document.querySelectorAll('a[href^="#"]').forEach(a => {
@@ -33,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const target = document.querySelector(a.getAttribute('href'));
       if (!target) return;
       e.preventDefault();
-      const top = target.getBoundingClientRect().top + window.scrollY - 72;
+      const top = target.getBoundingClientRect().top + window.scrollY - 84;
       window.scrollTo({ top, behavior: 'smooth' });
     });
   });

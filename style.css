@@ -2,7 +2,7 @@
    THIÊN HỔ TECHNOLOGY — Tailwind Supplement v2
    ═══════════════════════════════════════════════════ */
 
-html { scroll-behavior: smooth; scroll-padding-top: 64px; }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
 body { -webkit-font-smoothing: antialiased; }
 img { display: block; max-width: 100%; height: auto; }
 
@@ -13,19 +13,79 @@ img { display: block; max-width: 100%; height: auto; }
 
 /* ── Header ── */
 .header {
-  background: rgba(255,255,255,.7);
+  background: rgba(255,255,255,0.85);
   backdrop-filter: blur(12px);
-  transition: background .3s, box-shadow .3s;
+  transition: background .35s ease, box-shadow .35s ease;
 }
 .header.scrolled {
-  background: rgba(255,255,255,.95);
-  backdrop-filter: blur(16px);
-  box-shadow: 0 1px 3px rgba(0,0,0,.08);
+  background: #0F172A;
+  backdrop-filter: none;
+  box-shadow: 0 2px 24px rgba(0,0,0,.25);
 }
+
+/* ── CSS Logo ── */
+.logo-mark {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  text-decoration: none;
+  gap: 1px;
+  user-select: none;
+}
+.logo-top {
+  font-family: 'Stardos Stencil', cursive;
+  font-weight: 700;
+  font-size: 1.55rem;
+  letter-spacing: 0.03em;
+  color: #ED312F;
+  line-height: 1;
+}
+.logo-bottom {
+  font-family: 'Stardos Stencil', cursive;
+  font-weight: 700;
+  font-size: 1.0rem;
+  letter-spacing: 0.1em;
+  color: #1a1a2e;
+  line-height: 1;
+  transition: color .35s ease;
+}
+.header.scrolled .logo-bottom { color: #ffffff; }
+.logo-mark--footer .logo-top { font-size: 1.2rem; }
+.logo-mark--footer .logo-bottom { font-size: 0.78rem; color: rgba(255,255,255,0.7); }
+
+/* Nav links */
+.nav-link {
+  color: #1E293B;
+  transition: color .25s ease;
+}
+.nav-link:hover { color: #ED312F; }
+.header.scrolled .nav-link { color: rgba(255,255,255,.82); }
+.header.scrolled .nav-link:hover { color: #F97316; }
+
+/* CTA button */
+.nav-cta {
+  background: #ED312F;
+  color: #fff;
+  transition: background .25s ease;
+}
+.nav-cta:hover { background: #d42a28; }
+.header.scrolled .nav-cta { background: #F97316; color: #0F172A; }
+.header.scrolled .nav-cta:hover { background: #e86310; }
+
+/* Phone link */
+.phone-link { color: #ED312F; transition: color .25s ease; }
+.header.scrolled .phone-link { color: #F97316; }
+
+/* Hamburger bars */
+.hamburger-bar {
+  background: #1E293B;
+  transition: background .25s ease, transform .25s ease, opacity .25s ease;
+}
+.header.scrolled .hamburger-bar { background: #fff; }
 
 /* ── Mobile nav ── */
 .mobile-nav {
-  position: fixed; top: 64px; left: 0; right: 0;
+  position: fixed; top: 80px; left: 0; right: 0;
   background: rgba(255,255,255,.98);
   backdrop-filter: blur(16px);
   border-bottom: 1px solid #e5e7eb;
@@ -57,7 +117,116 @@ img { display: block; max-width: 100%; height: auto; }
 .field-err { font-size: .72rem; color: #ED312F; min-height: 18px; display: block; }
 .form-success { color: #249DBA; text-align: center; min-height: 20px; font-weight: 500; }
 
+/* ── Projects Bento Grid ── */
+.projects-bento {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 400px 280px;
+  gap: 14px;
+}
+.project-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  display: block;
+}
+.project-card--span2 { grid-column: span 2; }
+
+.project-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.project-card:hover img { transform: scale(1.06); }
+
+.project-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(5, 5, 15, 0.94) 0%,
+    rgba(5, 5, 15, 0.45) 45%,
+    rgba(5, 5, 15, 0.08) 100%
+  );
+  transition: background .4s ease;
+}
+.project-card:hover .project-card__overlay {
+  background: linear-gradient(
+    to top,
+    rgba(5, 5, 15, 0.97) 0%,
+    rgba(5, 5, 15, 0.6) 50%,
+    rgba(5, 5, 15, 0.15) 100%
+  );
+}
+
+.project-card__content {
+  position: absolute;
+  inset: 0;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.project-card__tag {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.75);
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.14);
+  padding: 4px 11px;
+  border-radius: 100px;
+  margin-bottom: 14px;
+}
+.project-card__stat {
+  font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+  font-weight: 900;
+  color: #ED312F;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  margin-bottom: 10px;
+}
+.project-card__title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 7px;
+  line-height: 1.3;
+}
+.project-card__desc {
+  font-size: 0.73rem;
+  color: rgba(255,255,255,0.58);
+  line-height: 1.55;
+  max-width: 380px;
+}
+
 /* ── Responsive ── */
+@media (max-width: 1024px) {
+  .projects-bento {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 320px 260px 260px;
+  }
+  .project-card--span2 { grid-column: span 2; }
+}
+@media (max-width: 640px) {
+  .projects-bento {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    gap: 10px;
+  }
+  .project-card,
+  .project-card--span2 {
+    grid-column: span 1;
+    height: 250px;
+  }
+}
 @media (max-width: 768px) {
   .hero { min-height: auto; }
 }
