@@ -23,7 +23,6 @@ img { display: block; max-width: 100%; height: auto; }
   box-shadow: 0 2px 24px rgba(0,0,0,.25);
 }
 
-/* ── CSS Logo ── */
 .logo-mark {
   display: flex;
   flex-direction: column;
@@ -31,6 +30,7 @@ img { display: block; max-width: 100%; height: auto; }
   text-decoration: none;
   gap: 1px;
   user-select: none;
+  align-items: center;
 }
 .logo-top {
   font-family: 'Stardos Stencil', cursive;
