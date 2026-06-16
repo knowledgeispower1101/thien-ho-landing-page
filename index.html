@@ -41,7 +41,8 @@
         <a href="#projects" class="nav-link px-4 py-2 text-sm font-medium transition-colors">Dự án</a>
         <a href="#contact" class="nav-cta ml-3 px-5 py-2 text-sm font-semibold rounded transition-colors">Nhận báo giá</a>
       </div>
-      <a href="tel:0886072780" class="phone-link hidden sm:flex items-center gap-1.5 text-sm font-semibold"><i class="fa-solid fa-phone text-xs"></i> 0886 072 780</a>
+      <a href="tel:0886072780" class="phone-link hidden md:flex items-center gap-1.5 text-sm font-semibold"><i class="fa-solid fa-phone text-xs"></i> 0886 072 780</a>
+      <a href="tel:0886072780" class="md:hidden phone-link flex items-center justify-center w-9 h-9 rounded-full bg-brand/10 text-brand text-xs" aria-label="Gọi ngay"><i class="fa-solid fa-phone"></i></a>
       <button class="lg:hidden flex flex-col gap-1 p-1 hamburger" id="hamburger" aria-label="Menu">
         <span class="hamburger-bar block w-5 h-[2px] rounded transition-all"></span>
         <span class="hamburger-bar block w-5 h-[2px] rounded transition-all"></span>
@@ -325,27 +326,13 @@
           <div class="project-card__content">
             <span class="project-card__tag">Công suất lớn</span>
             <div class="project-card__stat">+20%</div>
-            <h3 class="project-card__title">biến tần ARINCO AV68 cho máy xúc</h3>
-            <p class="project-card__desc">Tiết kiệm 20% điện nhờ tự động tăng giảm theo tải</p>
-          </div>
-        </article>
-
-      </div>
-
-      <!-- Máy nghiền rác 2 — full-width visual card -->
-      <div class="mt-8" data-aos="fade-up">
-        <article class="project-card">
-          <img src="static/projects/crane.jpg" alt="Hệ thống nghiền công suất lớn" loading="lazy">
-          <div class="project-card__overlay"></div>
-          <div class="project-card__content">
-            <span class="project-card__tag">Công suất lớn</span>
-            <div class="project-card__stat">+20%</div>
             <h3 class="project-card__title">Biến tần ARINCO AV68 cho máy xúc</h3>
             <p class="project-card__desc">Tiết kiệm 20% điện nhờ tự động tăng giảm theo tải</p>
           </div>
         </article>
+
       </div>
-    </div>
+
   </section>
 
   <!-- ═══ CTA BANNER + CONTACT ═══ -->
@@ -360,21 +347,21 @@
             Nhận báo giá<br>
             <span class="text-white/80">trong 2 giờ</span>
           </h2>
-          <p class="text-white/70 text-sm leading-relaxed max-w-[420px] mb-8">
-            Điền thông tin hoặc gọi trực tiếp. Đội ngũ kỹ thuật của Thiên Hổ sẽ tư vấn giải pháp phù hợp nhất cho nhà máy của bạn.
-          </p>
-          <div class="flex flex-col gap-3">
-            <a href="tel:0886072780" class="flex items-center gap-4 bg-white/10 backdrop-blur-sm rounded-xl px-5 py-4 hover:bg-white/20 transition-colors">
-              <div class="w-10 h-10 flex items-center justify-center rounded-lg bg-white/20 text-white text-sm"><i class="fa-solid fa-phone"></i></div>
-              <div><div class="text-[0.55rem] uppercase tracking-widest text-white/50">Miền Nam</div><div class="text-sm font-semibold">0886 072 780 <span class="text-white/60 font-normal text-xs">(Mr. Nam)</span> <span class="text-white/40 text-[0.5rem] block">sales8.thienho@gmail.com</span></div></div>
+          <div class="flex flex-col gap-4">
+            <a href="tel:0886072780" class="flex items-center gap-4 bg-white/15 backdrop-blur-sm rounded-2xl px-6 py-5 hover:bg-white/25 transition-all group">
+              <div class="w-14 h-14 flex items-center justify-center rounded-xl bg-brand text-white text-xl shadow-lg shrink-0"><i class="fa-solid fa-phone"></i></div>
+              <div class="flex-1"><div class="text-[0.55rem] uppercase tracking-widest text-white/50 mb-0.5">Miền Nam</div><div class="text-xl font-bold text-white">0886 072 780</div><div class="text-xs text-white/60">Mr. Nam &nbsp;·&nbsp; sales8.thienho@gmail.com</div></div>
+              <span class="inline-flex items-center gap-1 text-[0.55rem] font-bold uppercase tracking-wider bg-white/15 text-white px-3 py-1.5 rounded-full group-hover:bg-brand transition-colors"><i class="fa-solid fa-phone"></i> Gọi ngay</span>
             </a>
-            <a href="tel:0968168130" class="flex items-center gap-4 bg-white/10 backdrop-blur-sm rounded-xl px-5 py-4 hover:bg-white/20 transition-colors">
-              <div class="w-10 h-10 flex items-center justify-center rounded-lg bg-white/20 text-white text-sm"><i class="fa-solid fa-phone"></i></div>
-              <div><div class="text-[0.55rem] uppercase tracking-widest text-white/50">Miền Bắc</div><div class="text-sm font-semibold">0968 168 130 <span class="text-white/60 font-normal text-xs">(Mr. Kỳ)</span> <span class="text-white/40 text-[0.5rem] block">sales6.thienho@gmail.com</span></div></div>
+            <a href="tel:0968168130" class="flex items-center gap-4 bg-white/15 backdrop-blur-sm rounded-2xl px-6 py-5 hover:bg-white/25 transition-all group">
+              <div class="w-14 h-14 flex items-center justify-center rounded-xl bg-brand text-white text-xl shadow-lg shrink-0"><i class="fa-solid fa-phone"></i></div>
+              <div class="flex-1"><div class="text-[0.55rem] uppercase tracking-widest text-white/50 mb-0.5">Miền Bắc</div><div class="text-xl font-bold text-white">0968 168 130</div><div class="text-xs text-white/60">Mr. Kỳ &nbsp;·&nbsp; sales6.thienho@gmail.com</div></div>
+              <span class="inline-flex items-center gap-1 text-[0.55rem] font-bold uppercase tracking-wider bg-white/15 text-white px-3 py-1.5 rounded-full group-hover:bg-brand transition-colors"><i class="fa-solid fa-phone"></i> Gọi ngay</span>
             </a>
-            <a href="tel:0886797590" class="flex items-center gap-4 bg-white/10 backdrop-blur-sm rounded-xl px-5 py-4 hover:bg-white/20 transition-colors">
-              <div class="w-10 h-10 flex items-center justify-center rounded-lg bg-white/20 text-white text-sm"><i class="fa-solid fa-screwdriver-wrench"></i></div>
-              <div><div class="text-[0.55rem] uppercase tracking-widest text-white/50">Kỹ thuật</div><div class="text-sm font-semibold">0886 797 590 <span class="text-white/60 font-normal text-xs">(Mr. Thịnh)</span></div></div>
+            <a href="tel:0886797590" class="flex items-center gap-4 bg-white/15 backdrop-blur-sm rounded-2xl px-6 py-5 hover:bg-white/25 transition-all group">
+              <div class="w-14 h-14 flex items-center justify-center rounded-xl bg-dark/20 text-white text-xl shadow-lg shrink-0"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+              <div class="flex-1"><div class="text-[0.55rem] uppercase tracking-widest text-white/50 mb-0.5">Kỹ thuật</div><div class="text-xl font-bold text-white">0886 797 590</div><div class="text-xs text-white/60">Mr. Thịnh &nbsp;·&nbsp; Hỗ trợ 7 ngày/tuần</div></div>
+              <span class="inline-flex items-center gap-1 text-[0.55rem] font-bold uppercase tracking-wider bg-white/15 text-white px-3 py-1.5 rounded-full group-hover:bg-brand transition-colors"><i class="fa-solid fa-phone"></i> Gọi ngay</span>
             </a>
           </div>
         </div>
@@ -445,9 +432,16 @@
   </footer>
 
   <!-- Floating CTA -->
-  <div class="fixed bottom-6 left-6 z-40 flex flex-col gap-2">
-    <a href="tel:0886072780" class="w-12 h-12 flex items-center justify-center rounded-full bg-brand text-white shadow-lg hover:scale-110 transition-transform"><i class="fa-solid fa-phone text-lg"></i></a>
-    <a href="https://zalo.me/0886072780" target="_blank" class="w-12 h-12 flex items-center justify-center rounded-full bg-blue-600 text-white shadow-lg hover:scale-110 transition-transform"><i class="fa-solid fa-comment-dots text-lg"></i></a>
+  <div class="fixed bottom-6 right-6 z-40 flex flex-col gap-3">
+    <a href="tel:0886072780" class="flex items-center gap-2 pl-3 pr-4 py-2.5 rounded-full bg-brand text-white shadow-xl hover:shadow-2xl hover:scale-105 transition-all" aria-label="Gọi ngay">
+      <span class="relative flex h-3 w-3"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span><span class="relative inline-flex rounded-full h-3 w-3 bg-white"></span></span>
+      <i class="fa-solid fa-phone text-sm"></i>
+      <span class="text-xs font-bold">GỌI NGAY</span>
+    </a>
+    <a href="https://zalo.me/0886072780" target="_blank" class="flex items-center gap-2 pl-3 pr-4 py-2.5 rounded-full bg-blue-600 text-white shadow-xl hover:shadow-2xl hover:scale-105 transition-all">
+      <i class="fa-solid fa-comment-dots text-sm"></i>
+      <span class="text-xs font-bold">ZALO</span>
+    </a>
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
